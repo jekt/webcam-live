@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Webcam live</title>
+    <style type="text/css">
+      #videoCam {
+		    height: 450px;
+        width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <video id="videoCam" autoplay controls></video>
+    <p id="loginStatus"></p>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript">
+    window.dmAsyncInit = function()
+      {
+        DM.init({apiKey: 'b86528f8c9e79f7ffbf9', status: true, cookies: true});
+        getLoginStatus();
+      };
+    (function() {
+      var e = document.createElement('script'); e.async = true;
+      e.src = document.location.protocol + '//api.dmcdn.net/all.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+    }());
+</script>
+  </body>
+</html>
